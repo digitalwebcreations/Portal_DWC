@@ -11,3 +11,10 @@ toggleButton.addEventListener('click', () => {
 function scrollToSection(id) {
   document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
 }
+
+// Adiciona animação no hero ao carregar a página
+window.addEventListener('load', () => {
+  document.querySelector('.hero h2').classList.add('animate');
+  document.querySelector('.hero p').classList.add('animate');
+  document.querySelector('.hero button').classList.add('animate');
+});
