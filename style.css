@@ -1,7 +1,13 @@
 body {
-  margin: 0;
   font-family: Arial, sans-serif;
-  transition: background 0.3s, color 0.3s;
+  background-color: #fff;
+  color: #000;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: #f1f1f1;
 }
 
 header {
@@ -9,69 +15,17 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-  background: var(--header-bg);
-  color: var(--text);
+  background-color: #007BFF;
+  color: white;
 }
 
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.logo img {
-  width: 40px;
-}
-
-.hero {
-  text-align: center;
-  padding: 60px 20px;
-}
-
-.hero button {
-  padding: 10px 20px;
-  margin-top: 20px;
-  background: var(--button-bg);
-  color: var(--button-text);
-  border: none;
-  border-radius: 5px;
+nav button {
+  margin: 0 5px;
+  padding: 5px 10px;
   cursor: pointer;
 }
 
-.materias {
-  padding: 40px 20px;
-  text-align: center;
-}
-
-.materias .buttons a {
-  display: inline-block;
-  margin: 10px;
-  padding: 12px 20px;
-  background: var(--button-bg);
-  color: var(--button-text);
-  text-decoration: none;
-  border-radius: 5px;
-}
-
-/* Tema claro */
-:root {
-  --header-bg: #ffffff;
-  --text: #003366;
-  --button-bg: #007BFF;
-  --button-text: #ffffff;
-  --bg: #ffffff;
-}
-
-/* Tema escuro */
-.dark-mode {
-  --header-bg: #0d1b2a;
-  --text: #ffffff;
-  --button-bg: #1b263b;
-  --button-text: #ffffff;
-  --bg: #0d1b2a;
-}
-
-body {
-  background: var(--bg);
-  color: var(--text);
+section {
+  padding: 50px 20px;
+  border-bottom: 1px solid #ccc;
 }
