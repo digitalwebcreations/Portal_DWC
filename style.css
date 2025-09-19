@@ -1,59 +1,4 @@
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  transition: background 0.3s, color 0.3s;
-}
-
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-  background: var(--header-bg);
-  color: var(--text);
-}
-
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.logo img {
-  width: 40px;
-}
-
-.hero {
-  text-align: center;
-  padding: 60px 20px;
-}
-
-.hero button {
-  padding: 10px 20px;
-  margin-top: 20px;
-  background: var(--button-bg);
-  color: var(--button-text);
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.materias {
-  padding: 40px 20px;
-  text-align: center;
-}
-
-.materias .buttons a {
-  display: inline-block;
-  margin: 10px;
-  padding: 12px 20px;
-  background: var(--button-bg);
-  color: var(--button-text);
-  text-decoration: none;
-  border-radius: 5px;
-}
-
-/* Tema claro */
+/* Variáveis de cores e temas */
 :root {
   --header-bg: #ffffff;
   --text: #003366;
@@ -71,7 +16,67 @@ header {
   --bg: #0d1b2a;
 }
 
+/* Reset e estilos gerais */
 body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  transition: background 0.5s, color 0.5s; /* Transição suave de fundo e texto */
   background: var(--bg);
   color: var(--text);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background: var(--header-bg);
+  color: var(--text);
+  transition: background 0.5s, color 0.5s; /* Transição suave do header */
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  width: 40px;
+}
+
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 10px 5px 0 5px;
+  background: var(--button-bg);
+  color: var(--button-text);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.5s, color 0.5s; /* Transição suave dos botões */
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+.materias {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.materias .buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.materias .buttons button {
+  margin: 10px;
 }
