@@ -1,4 +1,3 @@
-
 :root {
   --header-bg: #ffffff;
   --text: #003366;
@@ -56,7 +55,7 @@ header {
 }
 
 .logo-img {
-  width: 100px;
+  width: 80px; /* Logo menor para liberar espaço para o botão */
   height: auto;
 }
 
@@ -70,7 +69,7 @@ header {
   background: linear-gradient(45deg, var(--button-bg-start), var(--button-bg-end));
   color: var(--button-text);
   transition: all 0.3s ease;
-  margin-left: auto; /* Alinha à direita */
+  margin-left: auto; /* garante que fique à direita */
 }
 
 #theme-toggle:hover {
@@ -152,4 +151,4 @@ button:hover, .materias .buttons a:hover {
   justify-content: center;
   flex-wrap: wrap;
     }
-  
+    
