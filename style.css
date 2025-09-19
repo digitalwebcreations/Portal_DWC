@@ -33,19 +33,19 @@ body {
   color: var(--text);
 }
 
-/* Header fixo */
+/* Header fixo e responsivo */
 header {
   position: fixed;
   top: 0;
   width: 100%;
   display: flex;
   align-items: center;
-  padding: 15px 30px;
+  justify-content: space-between; /* logo à esquerda, botão à direita */
+  padding: 10px 20px; /* padding reduzido para mobile */
   background: var(--header-bg);
   color: var(--text);
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   z-index: 1000;
-  position: relative; /* para o botão absoluto */
 }
 
 /* Logo */
@@ -56,29 +56,19 @@ header {
 }
 
 .logo-img {
-  width: 90px; /* tamanho médio da logo */
+  width: 70px; /* logo menor para caber o botão */
   height: auto;
 }
 
-/* Botão de tema absoluto */
+/* Botão de tema responsivo */
 #theme-toggle {
-  position: absolute;   /* flutua no header */
-  right: 20px;          /* distância da borda direita */
-  top: 50%;             /* centraliza verticalmente */
-  transform: translateY(-50%);
-  padding: 8px 12px;
-  font-size: 18px;
+  padding: 6px 10px; /* botão menor */
+  font-size: 16px;
   border-radius: 8px;
   border: none;
   cursor: pointer;
   background: linear-gradient(45deg, var(--button-bg-start), var(--button-bg-end));
   color: var(--button-text);
-  transition: all 0.3s ease;
-}
-
-#theme-toggle:hover {
-  transform: translateY(-50%) scale(1.05);
-  filter: brightness(1.1);
 }
 
 /* Hero com gradiente */
@@ -154,5 +144,4 @@ button:hover, .materias .buttons a:hover {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  }
-  
+}
