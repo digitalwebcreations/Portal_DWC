@@ -1,73 +1,105 @@
-/* Variáveis de cores e temas */
 :root {
   --header-bg: #ffffff;
   --text: #003366;
-  --button-bg: #007BFF;
+  --button-bg-start: #007BFF;
+  --button-bg-end: #00d4ff;
   --button-text: #ffffff;
   --bg: #ffffff;
+  --hero-gradient-start: #e0f7ff;
+  --hero-gradient-end: #ffffff;
 }
 
-/* Tema escuro */
 .dark-mode {
   --header-bg: #0d1b2a;
   --text: #ffffff;
-  --button-bg: #1b263b;
+  --button-bg-start: #1b263b;
+  --button-bg-end: #3a4a63;
   --button-text: #ffffff;
   --bg: #0d1b2a;
+  --hero-gradient-start: #0a1a2b;
+  --hero-gradient-end: #0d1b2a;
 }
 
-/* Reset e estilos gerais */
+/* Transições suaves */
+body, header, button, a, .hero, .materias {
+  transition: all 0.5s ease;
+}
+
+/* Corpo */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  transition: background 0.5s, color 0.5s; /* Transição suave de fundo e texto */
   background: var(--bg);
   color: var(--text);
 }
 
+/* Header fixo */
 header {
+  position: fixed;
+  top: 0;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
+  padding: 20px 40px;
   background: var(--header-bg);
   color: var(--text);
-  transition: background 0.5s, color 0.5s; /* Transição suave do header */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  z-index: 1000;
 }
 
+/* Logo */
 .logo {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 15px;
 }
 
-.logo img {
-  width: 40px;
+.logo-img {
+  width: 100px; /* Logo maior */
+  height: auto;
 }
 
+/* Hero com gradiente */
 .hero {
   text-align: center;
-  padding: 60px 20px;
+  padding: 120px 20px 80px;
+  background: linear-gradient(135deg, var(--hero-gradient-start), var(--hero-gradient-end));
 }
 
-button {
-  padding: 10px 20px;
-  margin: 10px 5px 0 5px;
-  background: var(--button-bg);
-  color: var(--button-text);
-  border: none;
-  border-radius: 5px;
+.hero h2 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Botões com gradiente animado */
+button, .materias .buttons a {
+  padding: 12px 25px;
+  margin: 10px;
+  border-radius: 8px;
   cursor: pointer;
   font-size: 16px;
-  transition: background 0.5s, color 0.5s; /* Transição suave dos botões */
+  text-decoration: none;
+  color: var(--button-text);
+  background: linear-gradient(45deg, var(--button-bg-start), var(--button-bg-end));
+  border: none;
+  transition: all 0.3s ease;
 }
 
-button:hover {
-  opacity: 0.9;
+button:hover, .materias .buttons a:hover {
+  transform: translateY(-3px);
+  filter: brightness(1.1);
 }
 
+/* Materiais */
 .materias {
-  padding: 40px 20px;
+  padding: 100px 20px 60px;
   text-align: center;
 }
 
@@ -75,8 +107,5 @@ button:hover {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-}
-
-.materias .buttons button {
-  margin: 10px;
-}
+    }
+  
