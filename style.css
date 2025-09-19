@@ -45,6 +45,7 @@ header {
   color: var(--text);
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   z-index: 1000;
+  position: relative; /* para o botão absoluto */
 }
 
 /* Logo */
@@ -55,12 +56,16 @@ header {
 }
 
 .logo-img {
-  width: 80px; /* Logo menor para liberar espaço para o botão */
+  width: 90px; /* tamanho médio da logo */
   height: auto;
 }
 
-/* Botão de tema */
+/* Botão de tema absoluto */
 #theme-toggle {
+  position: absolute;   /* flutua no header */
+  right: 20px;          /* distância da borda direita */
+  top: 50%;             /* centraliza verticalmente */
+  transform: translateY(-50%);
   padding: 8px 12px;
   font-size: 18px;
   border-radius: 8px;
@@ -69,11 +74,10 @@ header {
   background: linear-gradient(45deg, var(--button-bg-start), var(--button-bg-end));
   color: var(--button-text);
   transition: all 0.3s ease;
-  margin-left: auto; /* garante que fique à direita */
 }
 
 #theme-toggle:hover {
-  transform: scale(1.05);
+  transform: translateY(-50%) scale(1.05);
   filter: brightness(1.1);
 }
 
@@ -150,5 +154,5 @@ button:hover, .materias .buttons a:hover {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-    }
-    
+  }
+  
