@@ -4,15 +4,10 @@ const body = document.body;
 // Alterna tema claro/escuro
 toggleButton.addEventListener('click', () => {
   body.classList.toggle('dark-mode');
-
-  if (body.classList.contains('dark-mode')) {
-    toggleButton.textContent = '☀️';
-  } else {
-    toggleButton.textContent = '🌙';
-  }
+  toggleButton.textContent = body.classList.contains('dark-mode') ? '☀️' : '🌙';
 });
 
-// Função de rolagem suave
+// Rolagem suave para a seção
 function scrollToSection(id) {
   document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
 }
