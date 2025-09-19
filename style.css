@@ -39,9 +39,9 @@ header {
   top: 0;
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
-  padding: 20px 40px;
+  padding: 15px 30px;
   background: var(--header-bg);
   color: var(--text);
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
@@ -56,8 +56,30 @@ header {
 }
 
 .logo-img {
-  width: 100px; /* Logo maior */
+  width: 100px;
   height: auto;
+}
+
+/* Botão de tema flutuante */
+#theme-toggle {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  padding: 8px 12px;
+  font-size: 18px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(45deg, var(--button-bg-start), var(--button-bg-end));
+  color: var(--button-text);
+  transition: all 0.3s ease;
+  z-index: 1010;
+}
+
+#theme-toggle:hover {
+  transform: translateY(-50%) scale(1.05);
+  filter: brightness(1.1);
 }
 
 /* Hero com gradiente */
@@ -107,5 +129,5 @@ button:hover, .materias .buttons a:hover {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-    }
+                                                                 }
   
